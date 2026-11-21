@@ -9,7 +9,10 @@ from html.parser import HTMLParser
 
 load_dotenv()
 
-FRED_KEY = os.getenv("FRED_API_KEY", "").strip()
+try:
+    FRED_KEY = os.getenv("FRED_API_KEY", "").strip() or st.secrets.get("FRED_API_KEY", "").strip()
+except Exception:
+    FRED_KEY = os.getenv("FRED_API_KEY", "").strip()
 
 
 SERIES = {
