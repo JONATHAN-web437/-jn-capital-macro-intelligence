@@ -1,0 +1,8 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.streamlit/secrets.toml
+app_backup.py.py
+modules/test_fred.py
+modules/test_macro.py
